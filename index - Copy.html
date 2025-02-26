@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مشغل الفيديو مع بوستر واسم</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #222;
+            color: white;
+        }
+        .video-container {
+            position: relative;
+            width: 640px;
+            height: 360px;
+            margin: auto;
+        }
+        .poster {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://elasimah.com/uploads/images/2023/01/image_750x_63bfe4f3b6393.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .poster h2 {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>مشغل الأفلام</h1>
+    <div class="video-container">
+        <!-- بوستر الفيلم واسم الفيلم -->
+        <div class="poster" onclick="startVideo()">
+            <h2>اسم الفيلم: الأكشن 2024</h2>
+        </div>
+        <!-- iframe اللي هيشغل الفيديو -->
+        <iframe id="videoFrame" src="" allowfullscreen></iframe>
+    </div>
+
+    <script>
+        function startVideo() {
+            document.querySelector('.poster').style.display = 'none';
+            document.getElementById('videoFrame').src = "https://v.aflam.news/embed-73tpzp0ge3nl.html";
+        }
+    </script>
+
+</body>
+</html>
